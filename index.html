@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<style>
+p {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+button {
+  margin:auto;
+  display:block;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+ body {
+    background-color: #3f0000; /* Light gray background */
+  }
+.fade-out-text {
+  /* Default state is visible */
+  opacity: 1; 
+  transition: opacity 1s ease-out; /* Smooth transition for the opacity change */
+}
+ body {
+    color: white; /* Or use hex code: #FFFFFF or #fff */
+  }
+/* This class is added by JavaScript */
+.fade-out-text.is-hidden {
+  opacity: 0;
+}
+</style>
+<body>
+<h2>Lets see if you can find the joke</h2>
+
+<p>Maybe the joke is here</p>
+
+<p>Maybe these buttons will show the joke....</p>
+
+<button onclick="document.getElementById('myImage').src='istockphoto-1310496508-612x612.jpg'">step away from mirror</button>
+
+<img id="myImage" src="istockphoto-1310496508-612x612.jpg" style="width:500px">
+
+<button onclick="document.getElementById('myImage').src='download.jpg'">look into mirror</button>
+
+<h2>We got 3 buttons... one of them has to work :3</h2>
+
+<p id="demo">The joke isss.... </p>
+
+<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">1</button>
+
+<button type="button" onclick="document.getElementById('demo').style.display='none'">2</button>
+
+<button type="button" onclick="document.getElementById('demo').style.display='block'">3</button>
+
+<h2>welll that last one didnt work.... but i wonder what that button does</</h2>
+
+<p id="myText" class="fade-out-text">IF YOU CLICK THAT BUTTON YOULL NEVER HEAR THE JOKE!</p>
+
+<button type="button" onclick="fadeOutText()">i do nothing...</button>
+
+<h2>Wanna know a secret???</h2>
+
+<p>dont hate me btw</p>
+
+<p id="demo3" style="display:none">there was never a joke :3 </p>
+
+<button type="button" onclick="document.getElementById('demo3').style.display='block'">click me!</button>
+
+<script>
+function fadeOutText() {
+  const textElement = document.getElementById('myText');
+  // Add the 'is-hidden' class, which triggers the CSS transition
+  textElement.classList.add('is-hidden');
+}
+</script>
+
+</body>
+</html>
